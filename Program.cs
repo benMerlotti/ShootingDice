@@ -46,11 +46,13 @@ Console.WriteLine("-------------------");
 
 Player smack = new SmackTalkingPlayer("You are done!");
 smack.Name = "Mister Smack";
+smack.Play(player1);
 
 Console.WriteLine("-------------------");
 
 Player oneUp = new OneHigherPlayer();
 oneUp.Name = "One Upper";
+oneUp.Play(player1);
 
 Console.WriteLine("-------------------");
 
@@ -72,8 +74,14 @@ sore.Play(player2);
 
 Console.WriteLine("-------------------");
 
+Player upper = new UpperHalfPlayer();
+upper.Name = "Mister Upper";
+upper.Play(player1);
+
+Console.WriteLine("-------------------");
+
 List<Player> players = new List<Player>() {
-    player1, player2, player3, large, smack, oneUp, human, creative, sore
+    player1, player2, player3, large, smack, oneUp, human, creative, sore, upper
 };
 
 PlayMany(players);
